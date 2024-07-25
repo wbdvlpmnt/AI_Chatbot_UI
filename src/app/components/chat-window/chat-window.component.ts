@@ -16,39 +16,6 @@ export class ChatWindowComponent {
       messageType: 'system',
       messageContent: 'How may I help you today?',
     },
-    {
-      messageType: 'user',
-      messageContent: 'lorem ipsum',
-    },
-    {
-      messageType: 'system',
-      messageContent:
-        'How may I help you today? How may I help you today? How may I help you today? How may I help you today? How may I help you today? How may I help you today? How may I help you today?',
-    },
-    {
-      messageType: 'user',
-      messageContent: 'How may I help you today?',
-    },
-    {
-      messageType: 'system',
-      messageContent: 'How may I help you today?',
-    },
-    {
-      messageType: 'user',
-      messageContent: 'How may I help you today?',
-    },
-    {
-      messageType: 'user',
-      messageContent: 'How may I help you today?',
-    },
-    {
-      messageType: 'system',
-      messageContent: 'How may I help you today?',
-    },
-    {
-      messageType: 'user',
-      messageContent: 'How may I help you today?',
-    },
   ];
 
   constructor(private chatbotService: ChatbotService) {}
