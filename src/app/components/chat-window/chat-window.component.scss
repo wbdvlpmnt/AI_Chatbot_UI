@@ -29,3 +29,18 @@
 .send-btn{
     height: 55px;
 }
+
+.message{
+    border: 1px #1976d2 solid;
+    border-radius: 10rem;
+    height: 33px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    width:fit-content;
+    max-width: 200px;   
+}
+
+.system-message{
+    display: flex;
+    justify-content: end;
+}

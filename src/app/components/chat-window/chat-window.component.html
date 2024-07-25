@@ -4,8 +4,10 @@
       <mat-card appearance="raised">
         <mat-card-content>
           <div class="response">
-            <div>{{ messages[0].messageContent }}</div>
-            <div>{{ messages[1].messageContent }}</div>
+            <div class="system-message">
+              <div class="message">{{ messages[0].messageContent }}</div>
+            </div>
+            <div class="message">{{ messages[1].messageContent }}</div>
           </div>
         </mat-card-content>
       </mat-card>

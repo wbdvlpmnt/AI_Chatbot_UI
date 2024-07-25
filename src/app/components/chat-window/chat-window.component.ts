@@ -20,5 +20,9 @@ export class ChatWindowComponent {
       messageType: 'user',
       messageContent: 'what is the larget mountain?',
     },
+    {
+      messageType: 'system',
+      messageContent: 'The largest mountain is Mount Everest',
+    },
   ];
 }
