@@ -4,10 +4,15 @@
       <mat-card appearance="raised">
         <mat-card-content>
           <div class="response">
-            <div class="system-message">
-              <div class="message">{{ messages[0].messageContent }}</div>
+            <div
+              *ngFor="let message of messages"
+              [ngClass]="{
+                'system-message': message.messageType === 'system',
+                'user-message': message.messageType === 'user'
+              }"
+            >
+              <div class="message">{{ message.messageContent }}</div>
             </div>
-            <div class="message">{{ messages[1].messageContent }}</div>
           </div>
         </mat-card-content>
       </mat-card>
