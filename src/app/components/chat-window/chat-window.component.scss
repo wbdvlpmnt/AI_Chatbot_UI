@@ -7,9 +7,25 @@
 }
 
 .toolbar{
-    
+    height: 10vh;
 }
 
 .response{
-    height: 68vh;
+    height: 65vh;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+  
+.full-width {
+    width: 90%;
+}
+
+.send-btn{
+    height: 55px;
 }

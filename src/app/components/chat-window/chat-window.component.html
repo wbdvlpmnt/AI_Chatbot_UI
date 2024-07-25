@@ -6,11 +6,14 @@
           <div class="response"></div>
         </mat-card-content>
       </mat-card>
-
       <div class="toolbar">
-        <mat-toolbar>
-          <span>My Application</span>
-        </mat-toolbar>
+        <form class="form">
+          <mat-form-field class="full-width">
+            <mat-label>Start chatting...</mat-label>
+            <input matInput placeholder="Type your question..." value="" />
+          </mat-form-field>
+          <button mat-raised-button class="send-btn">Send Message</button>
+        </form>
       </div>
     </div>
   </mat-card-content>
