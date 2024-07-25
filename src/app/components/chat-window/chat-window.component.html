@@ -20,9 +20,16 @@
         <form class="form">
           <mat-form-field class="full-width">
             <mat-label>Start chatting...</mat-label>
-            <input matInput placeholder="Type your question..." value="" />
+            <input
+              matInput
+              placeholder="Type your question..."
+              value=""
+              [formControl]="chatMessageControl"
+            />
           </mat-form-field>
-          <button mat-raised-button class="send-btn">Send Message</button>
+          <button mat-raised-button class="send-btn" (click)="send()">
+            Send Message
+          </button>
         </form>
       </div>
     </div>

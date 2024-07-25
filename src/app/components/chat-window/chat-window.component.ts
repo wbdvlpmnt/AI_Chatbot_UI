@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 type message = {
   messageType: 'system' | 'user';
@@ -11,6 +12,8 @@ type message = {
   styleUrls: ['./chat-window.component.scss'],
 })
 export class ChatWindowComponent {
+  chatMessageControl = new FormControl('');
+
   messages: message[] = [
     {
       messageType: 'system',
@@ -25,4 +28,16 @@ export class ChatWindowComponent {
       messageContent: 'The largest mountain is Mount Everest',
     },
   ];
+
+  send() {
+    const message: message = {
+      messageType: 'user',
+      messageContent: this.chatMessageControl.value
+        ? this.chatMessageControl.value
+        : '',
+    };
+    this.messages.push(message);
+    this.chatMessageControl.reset();
+    console.log(message);
+  }
 }
