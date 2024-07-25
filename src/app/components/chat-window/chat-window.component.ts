@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { ChatbotService } from 'src/app/services/chatbot.service';
 import { message } from 'src/app/types';
 
 @Component({
@@ -15,15 +16,9 @@ export class ChatWindowComponent {
       messageType: 'system',
       messageContent: 'How may I help you today?',
     },
-    {
-      messageType: 'user',
-      messageContent: 'what is the larget mountain?',
-    },
-    {
-      messageType: 'system',
-      messageContent: 'The largest mountain is Mount Everest',
-    },
   ];
+
+  constructor(private chatbotService: ChatbotService) {}
 
   send() {
     const message: message = {
@@ -34,6 +29,8 @@ export class ChatWindowComponent {
     };
     this.messages.push(message);
     this.chatMessageControl.reset();
-    console.log(message);
+    this.chatbotService.sendPrompt(message).subscribe((res: message) => {
+      this.messages.push(res);
+    });
   }
 }
