@@ -1,4 +1,4 @@
-export type message = {
+export type Message = {
   messageType: 'system' | 'user';
   messageContent: string;
 };

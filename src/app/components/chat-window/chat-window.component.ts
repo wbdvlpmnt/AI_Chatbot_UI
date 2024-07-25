@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { ChatbotService } from 'src/app/services/chatbot.service';
-import { message } from 'src/app/types';
+import { Message } from 'src/app/types';
 
 @Component({
   selector: 'app-chat-window',
@@ -11,7 +11,7 @@ import { message } from 'src/app/types';
 export class ChatWindowComponent {
   chatMessageControl = new FormControl('');
 
-  messages: message[] = [
+  messages: Message[] = [
     {
       messageType: 'system',
       messageContent: 'How may I help you today?',
@@ -21,7 +21,7 @@ export class ChatWindowComponent {
   constructor(private chatbotService: ChatbotService) {}
 
   send() {
-    const message: message = {
+    const message: Message = {
       messageType: 'user',
       messageContent: this.chatMessageControl.value
         ? this.chatMessageControl.value
@@ -29,7 +29,7 @@ export class ChatWindowComponent {
     };
     this.messages.push(message);
     this.chatMessageControl.reset();
-    this.chatbotService.sendPrompt(message).subscribe((res: message) => {
+    this.chatbotService.sendPrompt(message).subscribe((res: Message) => {
       this.messages.push(res);
     });
   }

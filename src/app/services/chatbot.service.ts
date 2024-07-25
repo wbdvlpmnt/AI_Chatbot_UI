@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, catchError } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { message } from '../types';
+import { Message } from '../types';
 
 @Injectable({
   providedIn: 'root',
@@ -17,7 +17,7 @@ export class ChatbotService {
     }),
   };
 
-  sendPrompt(message: message): Observable<any> {
+  sendPrompt(message: Message): Observable<any> {
     return this.http.post<any>(this.url, message, this.httpOptions);
   }
 }
