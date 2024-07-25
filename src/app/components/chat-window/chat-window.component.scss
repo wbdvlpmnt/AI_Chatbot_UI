@@ -12,6 +12,7 @@
 
 .response{
     height: 65vh;
+    overflow-y: auto;
 }
 
 .form {
@@ -33,7 +34,7 @@
 .message{
     border: 0.25px #1976d2 solid;
     border-radius: 0.25rem;
-    height: 33px;
+    height: auto;
     padding: 0.5rem;
     margin: 1rem 0.5rem;
     width:fit-content;
