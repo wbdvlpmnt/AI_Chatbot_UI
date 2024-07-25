@@ -1,10 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
-
-type message = {
-  messageType: 'system' | 'user';
-  messageContent: string;
-};
+import { message } from 'src/app/types';
 
 @Component({
   selector: 'app-chat-window',
